@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <link href="images/d5982d12b_blue-diamond.png" rel="icon" type="image/png">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="/manifest.json" rel="manifest">
+  <title>
+   ZAIDAR
+  </title>
+  <meta content="A boutique digital agency creating artisanal web experiences, high-order AI automations, and robust infrastructure solutions." name="description">
+  <meta content="ZAIDAR" property="og:title">
+  <meta content="A boutique digital agency creating artisanal web experiences, high-order AI automations, and robust infrastructure solutions." property="og:description">
+  <meta content="website" property="og:type">
+  <script crossorigin="" src="js/index-CJLo895Z.js?v=2" type="module">
+  </script>
+  <link crossorigin="" href="css/index-BeTqY_Wz.css" rel="stylesheet">
+  <script type="module">
+   if (window.self === window.top) {
+  let lastPath = "";
+  function getPageNameFromPath(path) {
+    const segments = path.split("/").filter(Boolean);
+    return segments[0] || null;
+  }
+  function trackPageView() {
+    const path = window.location.pathname;
+    if (path === lastPath) return;
+    lastPath = path;
+    const pageName = getPageNameFromPath(path) || "home";
+    const appId = "6a3d14cbdc2732614ce9bc26";
+    if (!appId) return;
+    fetch(`/api/app-logs/${appId}/log-user-in-app/${pageName}`, {
+      method: "POST",
+    }).catch(() => {});
+  }
+  const originalPushState = history.pushState.bind(history);
+  history.pushState = function (...args) {
+    originalPushState(...args);
+    trackPageView();
+  };
+  const originalReplaceState = history.replaceState.bind(history);
+  history.replaceState = function (...args) {
+    originalReplaceState(...args);
+    trackPageView();
+  };
+  window.addEventListener("popstate", trackPageView);
+  trackPageView();
+}
+  </script>
+  <meta content="images/77198175c_logo.png" property="og:image">
+  <meta content="https://zaidar.base44.app" property="og:url">
+  <meta content="ZAIDAR" property="og:site_name">
+  <meta content="ZAIDAR" name="twitter:title">
+  <meta content="A boutique digital agency creating artisanal web experiences, high-order AI automations, and robust infrastructure solutions." name="twitter:description">
+  <meta content="https://media.base44.com/images/public/6a3d14cbdc2732614ce9bc26/77198175c_logo.png/v1/fill/w_1200,h_630/77198175c_logo.png" name="twitter:image">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="https://zaidar.base44.app" name="twitter:url">
+  <meta content="yes" name="mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="ZAIDAR" name="apple-mobile-web-app-title">
+  <link href="https://zaidar.base44.app" rel="canonical">
+  <script data-seo-source="builder" type="application/ld+json">
+   {"name": "ZAIDAR", "@context": "https://schema.org", "@type": "WebSite", "url": "https://zaidar.base44.app"}
+  </script>
+  <script data-seo-source="builder" type="application/ld+json">
+   {"name": "ZAIDAR", "logo": "https://media.base44.com/images/public/6a3d14cbdc2732614ce9bc26/c96102942_logo.png", "@context": "https://schema.org", "@type": "Organization", "url": "https://zaidar.base44.app"}
+  </script>
+  <!-- Load Supabase JS Client library from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    // Initialize Supabase client.
+    // Replace these placeholder values with your actual Supabase project credentials.
+    const SUPABASE_URL = 'https://jgypztdvfljamqjvsnlm.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpneXB6dGR2ZmxqYW1xanZzbmxtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY0Njk4NzgsImV4cCI6MjEwMjA0NTg3OH0.74XypToBAH1z935Rcr5Esd_8HIeXEHLXcKUeMaA31ws';
+    
+    if (SUPABASE_URL !== 'YOUR_SUPABASE_URL' && SUPABASE_ANON_KEY !== 'YOUR_SUPABASE_ANON_KEY') {
+      window.supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    } else {
+      console.warn("Supabase credentials are not configured in index.html. Form submissions will fail until configured.");
+    }
+
+    // Global submission handler called from the main application bundle
+    window.supabaseSubmit = async (data) => {
+      if (!window.supabaseClient) {
+        throw new Error("Supabase is not configured. Please add your SUPABASE_URL and SUPABASE_ANON_KEY in index.html.");
+      }
+      
+      const { error } = await window.supabaseClient
+        .from('store_signups')
+        .insert([data]);
+        
+      if (error) {
+        console.error("Supabase submission error:", error);
+        throw error;
+      }
+    };
+  </script>
+ </head>
+ <body>
+  <div id="root">
+   <div data-seo-source="builder" id="seo-snapshot" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
+    <main>
+     <header>
+      <h1>
+       ZAIDAR
+      </h1>
+      <p>
+       A boutique digital agency creating artisanal web experiences, high-order AI automations, and robust infrastructure solutions.
+      </p>
+     </header>
+    </main>
+   </div>
+  </div>
+ 
+
+</body></html>
