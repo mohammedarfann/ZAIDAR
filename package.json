@@ -1,0 +1,13 @@
+{
+  "name": "zaidar-website",
+  "version": "1.0.0",
+  "description": "Boutique digital agency marketing website for ZAIDAR",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
